@@ -2,6 +2,11 @@
 from flask import Flask, Blueprint, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 
+# pyinstaller
+import flask_sqlalchemy as _
+import flask_sqlalchemy._compat as _
+import config as _
+
 app = Flask(__name__)
 
 app.config.from_object('config')

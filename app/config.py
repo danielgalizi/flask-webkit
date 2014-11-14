@@ -1,13 +1,15 @@
 # Statement for enabling the development environment
 DEBUG = True
 
-# Define the application directory
+# Define the application directory and current work directory
 import os
-BASE_DIR = os.path.abspath(os.path.dirname(__file__)) 
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+WORK_DIR = os.getcwd()
 
 # Define the database - we are working with
 # SQLite for this example
-SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'# + os.path.join(BASE_DIR, 'app.db')
+#SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'# + os.path.join(BASE_DIR, 'app.db')
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(WORK_DIR, 'app.db')
 DATABASE_CONNECT_OPTIONS = {}
 
 # Application threads. A common general assumption is

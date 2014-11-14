@@ -55,3 +55,7 @@ docs/_build/
 # Database
 *.db
 Thumbs.db
+
+# PyInstaller
+app/build/
+app/dist/
